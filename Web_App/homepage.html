@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Elevator IOT And Digital Twinning</title>
+<link rel='stylesheet' href='style.css'> 
+<link rel='icon' href='data:,'>
+<!-- Line above prevents browsers(eg Chrome and FireFox) from requesting favicon.ico from local server-->
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- <body style='background-color: #EEEEEE;'> -->
+<body>
+<div class="topnav">
+<h1>INDUSTRY 4.0 IOT ELEVATOR<i class="fas fa-cogs"></i></h1>
+</div>
+<div class="content">
+<h3>FLOOR</h3>
+<button class="floor"  onclick="ground_Floor()">GND</button>
+<button class="floor" onclick="first_Floor()">FLOOR 1</button>
+<button class="floor" onclick="second_Floor()">FLOOR 2</button><br><br>
+<P>POWER AND STOP</P>
+<button class="start" onclick="start()">START</button>
+<button class="stop" onclick="stop()">STOP</button>
+</div>
+<!-- <div class="random" style="text-align:right;">
+<p>First Random number is: <span id='rand1'>-</span> </p>
+<p>Second Random number is: <span id='rand2'>-</span> </p>
+</div> -->
+</div>
+<div class="sensor" style="text-align:center;">
+<h4>Current Floor:</h4><h3 id="currentFloor_value" style="display:inline-block;">0</h3>
+<h4>Motion:</h4><h3 id="motion_value" style="display:inline-block;">False</h3>
+<h4>Direction:</h4><h3 id="direction_value" style="display:inline-block;">Stationary</h3>
+<h4>Angular Velocity:</h4><meter value="1" min="0" max="100" id="angularVelocity_meter"></meter>
+<h3 id="angularVelocity_value" style="display:inline-block;">0</h3>
+<h4>Linear Velocity:</h4><meter value="1" min="0" max="100" id="linearVelocity_meter"></meter>
+<h3 id="linearVelocity_value" style="display:inline-block;">0</h3>
+</div>
+
+<div class="view">
+<model-viewer id="elevatorModelTag" src="" alt="Elevator 3D model" shadow-intensity="1" 
+camera-controls ar ios-src="" orientation = "0deg -90deg 0deg" with-credentials="true"> 
+</model-viewer>
+</div>
+
+<script type="module" src="modelViewerScript.js"></script>
+<script src = "scripts/jsZip.js"></script>
+<script src="unCompressZip.js"></script>
+<script src=script.js></script>
+<script>
+  window.onload = function(event) {
+    initClientSocket();
+    getGLBFile();
+  }
+</script>
+</body>
+
+</html>

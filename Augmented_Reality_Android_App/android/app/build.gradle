@@ -1,0 +1,100 @@
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 31
+
+    packagingOptions {
+        pickFirst '**'
+        pickFirst 'lib/armeabi-v7a/libarcore_sdk_jni.so'
+        pickFirst 'lib/arm64-v8a/libarcore_sdk_jni.so'
+        pickFirst 'lib/armeabi-v7a/libarcore_sdk_c.so'
+        pickFirst 'lib/arm64-v8a/libUnityARCore.so'
+        pickFirst 'lib/armeabi-v7a/libUnityARCore.so'
+        pickFirst 'lib/armeabi-v7a/libarpresto_api.so'
+        pickFirst 'lib/arm64-v8a/libarpresto_api.so'
+        pickFirst 'lib/arm64-v8a/libarcore_sdk_c.so'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+        checkReleaseBuilds false
+    }
+
+    defaultConfig {
+        applicationId "com.elevatoriotandar.app"
+        minSdkVersion 26
+        targetSdkVersion 31
+//        versionCode flutterVersionCode.toInteger()
+//        versionName flutterVersionName
+        versionCode 1
+        versionName "0.0.1"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    buildTypes {
+        release {
+            //On using minifyEnabled and shrinkResources as documented by flutter_unity package developers add 
+            //-keep class com.xraph.plugin.** { *; }
+            //in android\unityLibrary\proguard-unity.txt
+            //Without doing this, messages wont be sent to Flutter from Unity but the opposite will work
+            minifyEnabled true 
+            shrinkResources true
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        profile {
+            signingConfig signingConfigs.debug
+        }
+        innerTest {
+            matchingFallbacks = ['debug','release']
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+
+dependencies {
+//    implementation project(':unityLibrary')
+    implementation(name:'VuforiaEngine', ext:'aar')
+    implementation platform('com.google.firebase:firebase-bom:30.2.0')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+}

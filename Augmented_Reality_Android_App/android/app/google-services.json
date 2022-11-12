@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "448195641621",
+    "project_id": "elevator-iot-project-fa043",
+    "storage_bucket": "elevator-iot-project-fa043.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:448195641621:android:51b680c68d4d036646691c",
+        "android_client_info": {
+          "package_name": "com.elevatoriotandar.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "448195641621-s0g2boc1g5u7qno4hg71a72c6ju7nu9f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9RZ1Bt4DNhVs-v1cWhJA2U5Cx076iIJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "448195641621-s0g2boc1g5u7qno4hg71a72c6ju7nu9f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
