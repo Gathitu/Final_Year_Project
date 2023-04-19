@@ -9,14 +9,17 @@ https://www.linkedin.com/posts/benson-gathitu_digital-twinning-and-iot-applicati
 
 • **Circuit functionality** 
 
-The physical control device is the ESP32. 
-There are buttons for each floor and limit 
-switches for detecting floor position. A
-one digit seven segment LED shows the 
-floor position while the RGB led shows if 
+On the the elevator, there are buttons for each floor and limit 
+switches for detecting floor position.
+They are connected to a circuit board that has an ESP32, which is the embedded hardware and the physical control device of the system.
+On the circuit board, there is a
+one-digit-seven segment LED which shows the 
+floor position and a RGB led that shows if 
 the system is offline or online and if the 
-elevator is in motion or at a specific floor.
- 
+elevator is in motion or at a specific floor. The LED's color is blue when offline and green when online. It also blinks when the elevator is moving.
+
+The elevator system:
+![Circuit board](/Images/20230419_134355.jpeg)
 
 • **Bluetooth Functionality**
 
