@@ -59,6 +59,7 @@ stored in ESP32 in a zip file folder in order
 to save on storage space and is then 
 unzipped by a script file also stored in the 
 ESP32. 
+
 Websockets framework was used in the communication of the devices in the LAN.
 
 
@@ -76,7 +77,9 @@ allowing the device to connect to the cloud
 server. The cloud server in this case acts as 
 an intermediary between the device and the 
 ESP32. 
+
 Socket.IO framework was used in the communication of the server web application and the client devices.
+
 
 • **Augmented Reality**
 
