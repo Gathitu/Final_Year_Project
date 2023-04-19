@@ -50,7 +50,7 @@ sink i.e., a Bluetooth Speaker in our case.
 
 The ESP32 creates a hotspot and a local 
 server that can be accessed by any device 
-within its LAN. The local server can be 
+within its Local Area Network (LAN. The local server can be 
 accessed using an IP address. If a device 
 joins the ESP32 network and one enters the 
 IP in a web browser, it serves a webpage. 
@@ -60,10 +60,12 @@ to save on storage space and is then
 unzipped by a script file also stored in the 
 ESP32. 
 
+Websockets framework was used in the communication of the devices in the LAN.
+
 
 • **Online mode**
 
-A NodeJS cloud server stores the webpage files and allows 
+A NodeJS web application hosted on a cloud server stores the webpage files and allows 
 connection to any device provided the 
 device is connected to the internet. The 
 ESP32, due to its Wi-Fi capabilities, is 
@@ -76,6 +78,7 @@ server. The cloud server in this case acts as
 an intermediary between the device and the 
 ESP32. 
 
+Socket.IO framework was used in the communication of the server web application and the client devices.
 
 • **Augmented Reality**
 
