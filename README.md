@@ -18,8 +18,14 @@ floor position and a RGB led that shows if
 the system is offline or online and if the 
 elevator is in motion or at a specific floor. The LED's color is blue when offline and green when online. It also blinks when the elevator is moving.
 
+The Circuit board:
+
+<img src="/Images/CircuitBoard.jpg" alt="Circuit board" width="400" height="400">
+
 The elevator system:
-![Circuit board](/Images/CircuitBoard.jpeg)
+
+<img src="/Images/20230419_134422.jpeg" alt="ElevatorSystem" width="400" height="700">
+
 
 • **Bluetooth Functionality**
 
@@ -83,11 +89,19 @@ ESP32.
 
 Socket.IO framework was used in the communication of the server web application and the client devices.
 
+A snip of the Web application:
+
+<img src="/Images/20230419_134415.jpeg" alt="Web application" width="800" height="550">
 
 • **Augmented Reality**
 
 Virtual digital twin was designed using 
 Siemens NX and Blender softwares and then 
 packaged in a web app and an android app. 
+
 The android platform uses augmented 
-virtual reality to visualize the digital twin.  
+reality to visualize the digital twin. Vuforia framework was used to achieve the Augmented Reality functionality. The app was developed using both C# in Unity and Flutter.
+
+A snip of the Android AR application:
+
+<img src="/Images/20230419_134355.jpeg" alt="Android AR app" width="400" height="800">
