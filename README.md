@@ -19,7 +19,7 @@ the system is offline or online and if the
 elevator is in motion or at a specific floor. The LED's color is blue when offline and green when online. It also blinks when the elevator is moving.
 
 The elevator system:
-![Circuit board](/Images/20230419_134355.jpeg)
+![Circuit board](/Images/CircuitBoard.jpeg)
 
 • **Bluetooth Functionality**
 
