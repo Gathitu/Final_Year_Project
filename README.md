@@ -5,10 +5,9 @@ A video of how the physical elevator system works + Integration with an Augmente
 https://www.linkedin.com/posts/benson-gathitu_digital-twinning-and-iot-application-in-a-activity-6986590255340531712-04jX?utm_source=share&utm_medium=member_android
 
 
+**<p align="center"> OPERATION </p>**
 
-            OPERATION
-
-• Circuit functionality 
+• **Circuit functionality** 
 
 The physical control device is the ESP32. 
 There are buttons for each floor and limit 
@@ -19,7 +18,7 @@ the system is offline or online and if the
 elevator is in motion or at a specific floor.
  
 
-• Bluetooth Functionality
+• **Bluetooth Functionality**
 
 Bluetooth is a frequency-hopping radio 
 technology that transmits data packets 
@@ -47,7 +46,7 @@ generate sound and send it to a Bluetooth
 sink i.e., a Bluetooth Speaker in our case.
 
 
-• Offline mode
+• **Offline mode**
 
 The ESP32 creates a hotspot and a local 
 server that can be accessed by any device 
@@ -62,9 +61,7 @@ unzipped by a script file also stored in the
 ESP32. 
 
 
-• Online mode
-
-
+• **Online mode**
 
 A NodeJS cloud server stores the webpage files and allows 
 connection to any device provided the 
@@ -80,7 +77,7 @@ an intermediary between the device and the
 ESP32. 
 
 
-• Augmented Reality
+• **Augmented Reality**
 
 Virtual digital twin was designed using 
 Siemens NX and Blender softwares and then 
