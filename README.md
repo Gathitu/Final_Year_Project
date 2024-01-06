@@ -1,7 +1,7 @@
 An Industry 4.0 Elevator system that uses IoT and Digital Twinning for real-time floor-to-floor control of a physical elevator and visualization of its movement; both offline an online.
 The microcontroller used is an ESP32 due to its Bluetooth and WiFi capabilities.
 
-A video of how the physical elevator system works + Integration with an Augmented-reality android app:
+A **VIDEO** of how the physical elevator system works + Integration with an Augmented-reality android app:
 https://www.linkedin.com/posts/benson-gathitu_digital-twinning-and-iot-application-in-a-activity-6986590255340531712-04jX?utm_source=share&utm_medium=member_android
 
 
